@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Enable/Disable</title>
+   
+</head>
+<body>
+    <center>
+        <input type="text" id="inputField" oninput="checkInput()" placeholder="Enter something...">
+        <button id="submitButton" disabled>Submit</button>
+    </center>
+     <script>
+        function checkInput() {
+            const inputField = document.getElementById('inputField');
+            const button = document.getElementById('submitButton');
+            button.disabled = inputField.value.trim() === '';
+        }
+    </script>
+</body>
+</html>
